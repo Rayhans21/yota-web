@@ -42,37 +42,30 @@ export default function Hero() {
 
           {/* Headline */}
           <h1 className='fade-up-delay-1 text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6 tracking-tight'>
-            Di sini, <span className='text-red-500'>teknologi</span> bukan sekadar{' '}
+            Di sini, <span className='text-red-500'>teknologi</span> bukan sekadar teori.{' '}
             <span className='relative inline-block'>
-              pelajaran
+              Tapi petualangan.
               <span className='absolute -bottom-1 left-0 right-0 h-[3px] bg-red-600 rounded' />
             </span>
-            .
           </h1>
 
           {/* Subheadline */}
           <p className='fade-up-delay-2 text-lg text-gray-300 leading-relaxed mb-10 max-w-xl'>
-            YOTA adalah komunitas pemuda Indonesia yang berhimpun untuk bereksperimen, meneliti, dan membangun inovasi di bidang <span className='text-white font-medium'>radio amatir, elektronika, komunikasi digital,</span> dan{' '}
-            <span className='text-white font-medium'>S.T.E.M terapan</span>.
+            YOTA adalah tempat berkumpulnya anak muda kreatif yang haus akan eksplorasi. Kita tidak langsung bicara tentang keanggotaan formal, melainkan mengajakmu untuk merasakan serunya dunia{' '}
+            <span className='text-white font-medium'>radio amatir, merakit elektronika, eksperimen komunikasi digital,</span> dan <span className='text-white font-medium'>teknologi STEM terapan</span> langsung dengan tanganmu sendiri!
           </p>
 
           {/* CTA buttons */}
           <div className='fade-up-delay-3 flex flex-col sm:flex-row gap-4' id='daftar'>
-            <a href='#' className='bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-3.5 rounded-full text-center transition-colors inline-flex items-center justify-center gap-2'>
-              Bergabung Sekarang
+            <a href='#kenapa' className='bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-3.5 rounded-full text-center transition-colors inline-flex items-center justify-center gap-2'>
+              Rasakan Keseruannya
               <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                 <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17 8l4 4m0 0l-4 4m4-4H3' />
               </svg>
             </a>
-            <a href='#tentang' className='border border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-3.5 rounded-full text-center transition-colors'>
-              Pelajari Lebih Lanjut
+            <a href='#kegiatan' className='border border-white/30 text-white hover:bg-white/10 font-semibold px-8 py-3.5 rounded-full text-center transition-colors'>
+              Lihat Dokumentasi Kegiatan
             </a>
-          </div>
-
-          {/* Callsign badge */}
-          <div className='mt-10 fade-up-delay-3 flex items-center gap-3'>
-            <span className='font-mono text-xs text-gray-500 tracking-widest uppercase'>Callsign Resmi</span>
-            <span className='font-mono text-sm text-red-400 bg-red-950/50 border border-red-800/40 px-3 py-1 rounded-md tracking-wider'>YH5NL · ORARI Lokal Pekanbaru</span>
           </div>
         </div>
       </div>
