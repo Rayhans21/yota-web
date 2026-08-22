@@ -1,43 +1,38 @@
-import Image from 'next/image';
-
 const timeline = [
   {
-    period: 'Fase Eksplorasi',
+    period: 'Tahap 1',
     title: 'Gathering & Mobile Station Satelit',
-    desc: 'Uji coba praktis berkomunikasi langsung dengan stasiun lain melalui satelit orbit rendah (LEO) IO-86 atau SO-50 menggunakan transceiver genggam sederhana.',
-    status: 'active',
+    desc: 'Latihan komunikasi via satelit orbit rendah (LEO) IO-86 atau SO-50 menggunakan transceiver genggam sederhana.',
   },
   {
-    period: 'Fase Inkubasi',
+    period: 'Tahap 2',
     title: 'Solder Bareng & Perakitan APRS',
-    desc: 'Belajar menyolder komponen elektronika dasar dan merakit pemancar APRS (Automatic Packet Reporting System) yang terintegrasi GPS untuk melacak koordinat secara real-time.',
-    status: 'active',
+    desc: 'Menyolder komponen elektronika dasar dan merakit pemancar APRS (Automatic Packet Reporting System) yang terintegrasi GPS.',
   },
   {
-    period: 'Fase Aplikasi Lapangan',
+    period: 'Tahap 3',
     title: 'ARDF Fox Hunting & Navigasi',
-    desc: 'Olahraga seru melacak sinyal pemancar radio tersembunyi menggunakan penerima khusus di alam terbuka, dipadukan dengan teknik navigasi darat.',
+    desc: 'Melacak sinyal pemancar radio tersembunyi menggunakan penerima khusus, dipadukan dengan teknik navigasi darat.',
   },
   {
-    period: 'Fase Apresiasi Global',
-    title: 'JOTA-JOTI Internasional & YOTA Camp',
-    desc: 'Ikut serta memancarkan sinyal berkomunikasi dengan operator muda di seluruh dunia dalam JOTA-JOTI, serta persiapan delegasi ke ajang YOTA Camp IARU Region 3.',
-    status: 'upcoming',
+    period: 'Tahap 4',
+    title: 'JOTA-JOTI & YOTA Camp',
+    desc: 'Berpartisipasi dalam JOTA-JOTI sebagai fasilitator bagi anggota Pramuka. Anggota YOTA Squad yang aktif dan berprestasi berkesempatan diproyeksikan mengikuti YOTA Camp IARU Region 3.',
   },
 ];
 
 const galleryPhotos = [
   {
     title: 'Kontak Satelit LEO',
-    desc: 'Eksperimen komunikasi suara real-time melalui satelit orbit rendah IO-86 tanpa internet.',
+    desc: 'Latihan komunikasi suara melalui satelit orbit rendah IO-86.',
   },
   {
     title: 'Perakitan Node APRS & Telemetri',
-    desc: 'Menyolder modul GPS, mikrokontroler, dan pemancar radio untuk sistem pelacakan mandiri.',
+    desc: 'Menyolder modul GPS, mikrokontroler, dan pemancar radio untuk sistem pelacakan.',
   },
   {
     title: 'ARDF Fox Hunting & Hiking',
-    desc: 'Mencari arah datangnya sinyal radio pemancar tersembunyi dengan antena pengarah di lapangan.',
+    desc: 'Mencari arah datangnya sinyal radio pemancar tersembunyi di lapangan.',
   },
 ];
 
@@ -49,17 +44,15 @@ export default function Activities() {
       <div className='relative z-10 max-w-7xl mx-auto px-6'>
         <div className='grid lg:grid-cols-2 gap-16 items-start mb-20'>
           <div>
-            <p className='font-mono text-xs text-red-400 tracking-[3px] uppercase mb-4'>Keseruan Kegiatan Kami</p>
-            <h2 className='text-4xl font-bold text-white leading-tight mb-4'>
-              Lebih dari sekadar teori, <span className='text-red-400'>ini soal mencoba.</span>
-            </h2>
-            <p className='text-gray-400 text-lg'>Intip berbagai aktivitas seru, eksperimen praktis, dan interaksi nyata yang bisa kamu rasakan bersama komunitas YOTA Pekanbaru.</p>
+            <p className='font-mono text-xs text-red-400 tracking-[3px] uppercase mb-4'>Kegiatan</p>
+            <h2 className='text-4xl font-bold text-white leading-tight mb-4'>Kegiatan YOTA Academy</h2>
+            <p className='text-gray-400 text-lg'>Beberapa kegiatan yang dijalankan dalam pembinaan YOTA Squad, ORARI Daerah Riau.</p>
           </div>
         </div>
 
         {/* Documentation / Gallery Slot */}
         <div className='mb-24'>
-          <p className='font-mono text-xs text-gray-400 tracking-[3px] uppercase mb-8'>DOKUMENTASI KEGIATAN & EKSPERIMEN</p>
+          <p className='font-mono text-xs text-gray-400 tracking-[3px] uppercase mb-8'>DOKUMENTASI KEGIATAN</p>
           <div className='grid md:grid-cols-3 gap-6'>
             {galleryPhotos.map((photo, index) => (
               <div key={index} className='bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-red-500/40 transition-all group'>
@@ -88,9 +81,9 @@ export default function Activities() {
           </div>
         </div>
 
-        {/* Timeline / Rencana Eksplorasi */}
+        {/* Timeline / Alur Pembinaan */}
         <div>
-          <p className='font-mono text-xs text-gray-400 tracking-[3px] uppercase mb-10'>ALUR & RENCANA BELAJAR SANTAI</p>
+          <p className='font-mono text-xs text-gray-400 tracking-[3px] uppercase mb-10'>ALUR PEMBINAAN</p>
           <div className='relative'>
             {/* Vertical line */}
             <div className='absolute left-[7px] md:left-1/2 top-0 bottom-0 w-px bg-red-900/50 md:-translate-x-px' />
@@ -104,12 +97,8 @@ export default function Activities() {
                   {/* Card */}
                   <div className={`ml-8 md:ml-0 md:w-[calc(50%-2rem)] ${i % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
                     <div className='bg-white/5 border border-white/10 rounded-2xl p-5 hover:bg-white/10 transition-colors'>
-                      <div className='flex items-center justify-between mb-2'>
-                        <span className='font-mono text-xs text-red-400 tracking-widest'>{item.period}</span>
-                        {item.status === 'active' && <span className='font-mono text-[10px] bg-red-500/20 text-red-400 border border-red-500/30 px-2 py-0.5 rounded-full tracking-wider'>EKSPLORASI</span>}
-                        {item.status === 'upcoming' && <span className='font-mono text-[10px] bg-blue-500/20 text-blue-400 border border-blue-500/30 px-2 py-0.5 rounded-full tracking-wider'>PUNCAK</span>}
-                      </div>
-                      <h3 className='text-white font-bold mb-1.5'>{item.title}</h3>
+                      <span className='font-mono text-xs text-red-400 tracking-widest'>{item.period}</span>
+                      <h3 className='text-white font-bold mb-1.5 mt-2'>{item.title}</h3>
                       <p className='text-gray-400 text-sm leading-relaxed'>{item.desc}</p>
                     </div>
                   </div>

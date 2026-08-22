@@ -1,33 +1,25 @@
+import Image from 'next/image';
+
 const reasons = [
   {
     num: '01',
-    title: 'Eksperimen Perangkat Nyata',
-    desc: 'Bukan sekadar simulasi atau tutorial video. Di sini kamu bisa menyolder, merakit, dan mencoba langsung transceiver, antena, hingga modul satelit orbit rendah.',
+    title: 'Edukasi & Literasi Frekuensi',
+    desc: 'Belajar menggunakan frekuensi radio dengan benar, aman, dan sesuai regulasi pemerintah.',
   },
   {
     num: '02',
-    title: 'Ngobrol Lintas Batas',
-    desc: 'Hubungkan dirimu dengan anak muda lain di seluruh dunia melalui komunikasi gelombang radio. Rasakan sensasi menembus batas negara tanpa internet.',
+    title: 'Pengembangan Skill Teknis',
+    desc: 'Berlatih keahlian praktis: perakitan perangkat, pemformatan sistem, Fox Hunting, dan integrasi IoT.',
   },
   {
     num: '03',
-    title: 'Kembangkan Skill & Logika STEM',
-    desc: 'Pelajari elektronika praktis, fisika propagasi udara, dan pemrograman komunikasi digital dengan cara yang santai dan penuh eksperimen seru.',
+    title: 'JOTA-JOTI & YOTA Camp',
+    desc: 'YOTA Squad akan dibekali untuk menjadi pendamping dan fasilitator teknis bagi anggota Pramuka pada kegiatan tahunan JOTA-JOTI. Juga berkesempatan mengikuti International YOTA Camp IARU Region 3 bagi anggota yang aktif dan berprestasi.',
   },
   {
     num: '04',
-    title: 'Buka Peluang Baru',
-    desc: 'Dapatkan bimbingan gratis jika nantinya kamu tertarik mengambil sertifikasi resmi Amatir Radio (UNAR), serta peluang ikut serta dalam kegiatan kepemudaan internasional.',
-  },
-  {
-    num: '05',
-    title: 'Kolaborasi Komunitas',
-    desc: 'Berkenalan dan belajar bareng mentor-mentor berpengalaman serta teman-teman sebaya yang memiliki antusiasme tinggi di bidang teknologi radio.',
-  },
-  {
-    num: '06',
-    title: 'Aksi Sosial Nyata',
-    desc: 'Pelajari bagaimana teknologi radio amatir menjadi penyelamat komunikasi utama saat bencana alam melanda, sebuah kontribusi kemanusiaan yang sangat berharga.',
+    title: 'Komunikasi Darurat',
+    desc: 'Dilatih kesiapsiagaan untuk menjadi relawan komunikasi saat terjadi bencana.',
   },
 ];
 
@@ -38,19 +30,29 @@ export default function WhyJoin() {
         <div className='grid lg:grid-cols-2 gap-16 items-start'>
           {/* Left sticky header */}
           <div className='lg:sticky lg:top-28'>
-            <p className='font-mono text-xs text-red-600 tracking-[3px] uppercase mb-4'>Kenapa Mencoba?</p>
+            <p className='font-mono text-xs text-red-600 tracking-[3px] uppercase mb-4'>Maksud &amp; Tujuan YOTA Academy</p>
             <h2 className='text-4xl font-bold text-gray-900 leading-tight mb-6'>
-              Tempat buat kamu yang punya rasa ingin tahu <span className='text-red-600'>tanpa batas</span>.
+              Apa yang kamu pelajari di <span className='text-red-600'>YOTA Academy</span>?
             </h2>
-            <p className='text-gray-500 text-lg leading-relaxed mb-10'>
-              YOTA bukan sekadar tempat kumpul biasa. Ini adalah ruang bermain bagi mereka yang suka membongkar pasang alat, penasaran bagaimana sinyal bekerja, dan ingin mencoba hal baru yang tidak diajarkan di sekolah.
-            </p>
-            <a href='#kegiatan' className='inline-flex items-center gap-2 bg-[#0a1628] text-white font-semibold px-8 py-3.5 rounded-full hover:bg-gray-800 transition-colors'>
-              Lihat Keseruan Kami
-              <svg className='w-4 h-4' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
-                <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M17 8l4 4m0 0l-4 4m4-4H3' />
-              </svg>
-            </a>
+            <p className='text-gray-500 text-lg leading-relaxed mb-10'>Melalui YOTA Academy, ORARI Daerah Riau memfasilitasi pelajar dan mahasiswa dalam kegiatan berikut ini.</p>
+
+            {/* Foto kegiatan — ganti placeholder di bawah dengan foto asli, taruh filenya di /public/activities/ */}
+            <div className='grid grid-cols-3 gap-3'>
+              {[
+                { title: 'Kontak Satelit LEO', src: '/activities/2.jpeg' },
+                { title: 'YOTA Camp 2023', src: '/activities/1.jpeg' },
+                { title: 'ARDF Fox Hunting', src: '/activities/5.jpeg' },
+              ].map((photo) => (
+                <div key={photo.title} className='relative aspect-square rounded-xl bg-gray-100 border border-gray-200 overflow-hidden group'>
+                  {/* TODO: setelah foto tersedia, ganti div placeholder ini dengan
+                      <Image src="/activities/xxx.jpg" alt={photo.title} fill sizes="150px" className="object-cover" /> */}
+                  <Image src={photo.src} alt={photo.title} fill sizes='300px' className='object-cover' />
+                  <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0' />
+
+                  <span className='absolute bottom-1.5 left-1.5 right-1.5 text-[10px] font-mono text-white leading-tight'>{photo.title}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Right: reasons list */}

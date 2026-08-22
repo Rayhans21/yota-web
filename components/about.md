@@ -9,17 +9,17 @@ export default function About() {
           <div>
             <p className='font-mono text-xs text-red-600 tracking-[3px] uppercase mb-4'>Tentang YOTA</p>
             <h2 className='text-4xl font-bold text-gray-900 leading-tight mb-6'>
-              Bukan sekadar klub radio.
+              Bukan sekadar komunitas,
               <br />
-              <span className='text-red-600'>Lab eksperimen</span> pemuda.
+              <span className='text-red-600'>YOTA</span> adalah wadah eksplorasi bagi generasi muda.
             </h2>
             <p className='text-gray-600 leading-relaxed mb-6 text-lg'>
-              YOTA (Youngsters On The Air) adalah program internasional di bawah IARU yang menghubungkan anak muda pecinta teknologi dari seluruh dunia melalui radio amatir. Di Riau, YOTA dijalankan sebagai{' '}
-              <span className='font-semibold text-gray-900'>YOTA Academy</span> oleh ORARI Daerah Riau, wadah resmi pembinaan generasi muda menuju kader terlatih yang disebut <span className='font-semibold text-gray-900'>YOTA Squad</span>.
+              YOTA (Youngsters On The Air) adalah program internasional di bawah IARU yang menghubungkan anak muda pecinta teknologi dari seluruh dunia melalui radio amatir. Di Riau, pembinaan generasi muda direalisasikan dalam bentuk{' '}
+              <span className='font-semibold text-gray-900'>YOTA Academy</span> ORARI Daerah Riau. Dengan kader muda terlatih yang disebut <span className='font-semibold text-gray-900'>YOTA Squad</span>.
             </p>
             <p className='text-gray-600 leading-relaxed mb-10'>
-              Kami percaya bahwa antena bukan sekadar kabel dan logam — ia adalah jembatan antara penasaran dan penemuan. Di YOTA Academy, kamu bereksperimen dengan satelit sungguhan, membangun sensor kebencanaan dari nol, dan berbicara
-              langsung dengan operator radio dari 150 negara.
+              Kami percaya bahwa antena bukan sekadar kabel dan logam — ia adalah jembatan antara penasaran dan penemuan. Di YOTA Academy, kami bereksperimen dengan satelit amatir, membangun sensor kebencanaan dari nol, dan berbicara
+              langsung dengan operator radio dari 340 entitas negara.
             </p>
 
             {/* Badges */}
@@ -41,7 +41,7 @@ export default function About() {
 
               {/* Logo */}
               <div className='relative w-64 h-64 rounded-full overflow-hidden shadow-2xl border-4 border-white'>
-                <Image src='/logo-yota.png' alt='Logo YOTA Indonesia' fill sizes='256px' className='object-cover' />
+                <Image src='/logo-yota.png' alt='Logo YOTA Indonesia' fill className='object-cover' />
               </div>
             </div>
 
