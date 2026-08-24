@@ -7,7 +7,7 @@ export default function CTA() {
           Tertarik ikut kegiatan <span className='text-red-600'>YOTA Academy</span>?
         </h2>
         <p className='text-gray-500 text-lg leading-relaxed mb-10 max-w-xl mx-auto'>
-          Kamu tidak perlu langsung menjadi anggota ORARI atau punya lisensi radio amatir. Hubungi kami untuk info kegiatan dan cara bergabung sebagai bagian dari YOTA Squad.
+          Hubungi kami untuk info kegiatan dan cara bergabung sebagai bagian dari YOTA Squad.
         </p>
 
         <a
