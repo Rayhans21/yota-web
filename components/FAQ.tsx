@@ -36,9 +36,6 @@ export default function FAQ() {
         <div>
           <p className='mb-4 font-mono text-xs uppercase tracking-[3px] text-red-600'>FAQ</p>
           <h2 className='mb-5 text-3xl font-bold leading-tight text-gray-900 md:text-4xl'>Pertanyaan yang sering ditanyakan</h2>
-          <p className='max-w-md text-base leading-relaxed text-gray-500'>
-            Template ini bisa kamu isi ulang langsung dari array <span className='font-semibold text-gray-700'>faqItems</span> di komponen FAQ.
-          </p>
         </div>
 
         <div className='divide-y divide-gray-200 border-y border-gray-200'>
