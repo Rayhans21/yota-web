@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className='relative min-h-screen bg-[#0a1628] overflow-hidden flex items-center'>
+    <section className='relative flex min-h-[100svh] items-center overflow-hidden bg-[#0a1628] md:min-h-screen'>
       {/* Dot grid background */}
       <div className='absolute inset-0 dot-grid opacity-20' />
 
@@ -30,14 +30,14 @@ export default function Hero() {
 
             {/* Logo */}
             <div className='relative w-48 h-48 rounded-full overflow-hidden shadow-2xl'>
-              <Image src='/logo-yota.png' alt='Logo YOTA Indonesia' fill sizes='256px' className='object-cover' />
+              <Image src='/logo-yota-128.png' alt='Logo YOTA Indonesia' fill sizes='192px' loading='lazy' decoding='async' className='object-cover' />
             </div>
           </div>
         </div>
       </div>
 
       {/* Content */}
-      <div className='relative z-10 max-w-7xl mx-auto px-6 pt-24 pb-16 lg:pt-20'>
+      <div className='relative z-10 mx-auto max-w-7xl px-6 pb-14 pt-24 sm:pb-16 lg:pt-20'>
         <div className='max-w-2xl'>
           {/* Eyebrow */}
           <div className='fade-up inline-flex items-center gap-2 mb-6'>
@@ -47,7 +47,7 @@ export default function Hero() {
           </div>
 
           {/* Headline */}
-          <h1 className='fade-up-delay-1 text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-6 tracking-tight'>
+          <h1 className='mb-6 text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl'>
             <span className='text-red-500'>YOTA</span> adalah wadah eksplorasi bagi generasi muda
             <span className='relative inline-block'>
               <span className='absolute -bottom-1 left-0 right-0 h-[3px] bg-red-600 rounded' />

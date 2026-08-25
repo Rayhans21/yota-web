@@ -19,7 +19,7 @@ body {
 }
 
 .font-mono {
-  font-family: var(--font-mono), monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 /* Noise texture overlay for sections */
@@ -58,6 +58,26 @@ body {
 .fade-up-delay-1 { animation-delay: 0.15s; opacity: 0; animation: fadeUp 0.7s 0.15s ease forwards; }
 .fade-up-delay-2 { animation-delay: 0.3s; opacity: 0; animation: fadeUp 0.7s 0.3s ease forwards; }
 .fade-up-delay-3 { animation-delay: 0.45s; opacity: 0; animation: fadeUp 0.7s 0.45s ease forwards; }
+
+@media (max-width: 767px) {
+  .fade-up,
+  .fade-up-delay-2,
+  .fade-up-delay-3 {
+    animation-delay: 0s;
+    animation-duration: 0.35s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
 
 /* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }

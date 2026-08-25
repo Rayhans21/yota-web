@@ -19,7 +19,7 @@ export default function Navbar() {
       <div className='max-w-7xl mx-auto px-6 h-16 flex items-center justify-between'>
         {/* Logo */}
         <a href='#' className='flex items-center gap-3'>
-          <Image src='/logo-yota.png' alt='YOTA Indonesia' width={40} height={40} priority className='rounded-full' />
+          <Image src='/logo-yota-128.png' alt='YOTA Indonesia' width={40} height={40} loading='eager' decoding='async' className='rounded-full' />
           <div>
             <div className={`font-bold text-sm leading-tight tracking-wide ${scrolled ? 'text-gray-900' : 'text-white'}`}>YOTA Indonesia</div>
             <div className={`font-mono text-[10px] leading-tight tracking-widest ${scrolled ? 'text-red-600' : 'text-red-300'}`}>YOUNGSTERS ON THE AIR</div>
