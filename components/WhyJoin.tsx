@@ -39,14 +39,14 @@ export default function WhyJoin() {
             {/* Foto kegiatan — ganti placeholder di bawah dengan foto asli, taruh filenya di /public/activities/ */}
             <div className='grid grid-cols-3 gap-3'>
               {[
-                { title: 'Kontak Satelit LEO', src: '/activities/2.jpeg' },
-                { title: 'YOTA Camp 2023', src: '/activities/1.jpeg' },
-                { title: 'ARDF Fox Hunting', src: '/activities/5.jpeg' },
+                { title: 'Kontak Satelit LEO', src: '/activities/2-480.jpg' },
+                { title: 'YOTA Camp 2023', src: '/activities/1-480.jpg' },
+                { title: 'ARDF Fox Hunting', src: '/activities/5-480.jpg' },
               ].map((photo) => (
                 <div key={photo.title} className='relative aspect-square rounded-xl bg-gray-100 border border-gray-200 overflow-hidden group'>
                   {/* TODO: setelah foto tersedia, ganti div placeholder ini dengan
                       <Image src="/activities/xxx.jpg" alt={photo.title} fill sizes="150px" className="object-cover" /> */}
-                  <Image src={photo.src} alt={photo.title} fill sizes='300px' className='object-cover' />
+                  <Image src={photo.src} alt={photo.title} fill sizes='(max-width: 768px) 30vw, 150px' loading='lazy' decoding='async' quality={70} className='object-cover' />
                   <div className='absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/0' />
 
                   <span className='absolute bottom-1.5 left-1.5 right-1.5 text-[10px] font-mono text-white leading-tight'>{photo.title}</span>

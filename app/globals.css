@@ -38,6 +38,48 @@ body {
   background-size: 24px 24px;
 }
 
+@supports (animation-timeline: scroll()) {
+  .site-navbar {
+    animation: navbarSurface linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 72px;
+  }
+
+  .navbar-title,
+  .navbar-menu-trigger {
+    animation: navbarText linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 72px;
+  }
+
+  .navbar-subtitle {
+    animation: navbarSubtitle linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 72px;
+  }
+}
+
+@keyframes navbarSurface {
+  to {
+    border-color: rgb(243 244 246);
+    background-color: rgb(255 255 255 / 0.95);
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    backdrop-filter: blur(4px);
+  }
+}
+
+@keyframes navbarText {
+  to {
+    color: rgb(17 24 39);
+  }
+}
+
+@keyframes navbarSubtitle {
+  to {
+    color: rgb(220 38 38);
+  }
+}
+
 /* Animated radio wave */
 @keyframes ripple {
   0% { transform: scale(1); opacity: 0.6; }

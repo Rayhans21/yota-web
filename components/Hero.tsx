@@ -30,7 +30,7 @@ export default function Hero() {
 
             {/* Logo */}
             <div className='relative w-48 h-48 rounded-full overflow-hidden shadow-2xl'>
-              <Image src='/logo-yota-128.png' alt='Logo YOTA Indonesia' fill sizes='192px' loading='lazy' decoding='async' className='object-cover' />
+              <Image src='/logo-yota-128.png' alt='Logo YOTA Indonesia' fill sizes='192px' loading='lazy' decoding='async' quality={70} className='object-cover' />
             </div>
           </div>
         </div>
